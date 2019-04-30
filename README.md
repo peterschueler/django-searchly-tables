@@ -26,7 +26,7 @@ and specify for which model you would like to use it:
 		table.labels = {'baseField1': 'labelForBaseField1', 'foreignkey_relationship': 'labelForForeignKeyRelationship', 'baseField2': 'labelForBaseField2'}
 
 		# Optional links to models in fields
-		table.field_links = {'baseField2': ['app:view': 'url_parameter']}
+		table.field_links = {'baseField2': ['app:view', 'url_parameter']}
 		if request.POST:
 			table.post(request.POST, filter=True, sort=True)
 		return render(request, 'example/table.html', {'table': table})
