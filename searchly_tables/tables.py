@@ -144,7 +144,11 @@ class SearchlyTable(object):
 								id_val = field
 								if display_field is None:
 									id_val = "{}_{}".format(field, 'none')
-								print(display_field)
+								if field in self.field_links.keys():
+									field_list = self.field_links[field]
+									field_link = '<a href="{}">{}</a>' \
+										.format(reverse(field_list[0], args=[getattr(obj, v) for v in field_list[1:]]), display_field)
+									_val = field_link
 								if type(display_field) == datetime.datetime:
 									_d = timezone.localtime(display_field)
 									_val = _d.strftime(self.date_format)
