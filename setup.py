@@ -21,7 +21,7 @@ setup(
 		'Environment :: Web Environment',
 		'Framework :: Django',
 		'Framework :: Django :: 2.1',
-		'Intendend Audience :: Developers',
+		'Intended Audience :: Developers',
 		'License :: OSI Approved :: MIT License',
 		'Operating System :: OS Independent',
 		'Programming Language :: Python',
